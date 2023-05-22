@@ -46,16 +46,19 @@ android {
             excludes.add("/META-INF/{AL2.0,LGPL2.1}")
         }
     }
-
 }
 
 dependencies {
     implementation(Dependencies.coreKtx)
     implementation(Dependencies.lifecycleKtx)
+
+    implementation(platform(Dependencies.composeBom))
     implementation(Dependencies.ActivityCompose)
+    implementation(Dependencies.composeGraphics)
     implementation(Dependencies.composeUi)
     implementation(Dependencies.composeUiToolingPreview)
     implementation(Dependencies.material3)
+
     implementation(Dependencies.navigationCompose)
     implementation(Dependencies.navigationAnimation)
     implementation(Dependencies.gson)
@@ -67,6 +70,8 @@ dependencies {
     testImplementation(Dependencies.junit)
     androidTestImplementation(Dependencies.junitExt)
     androidTestImplementation(Dependencies.expresso)
+
+    androidTestImplementation(platform(Dependencies.composeBom))
     androidTestImplementation(Dependencies.junitCompose)
     debugImplementation(Dependencies.composeUiTooling)
     debugImplementation(Dependencies.composeTestManifest)

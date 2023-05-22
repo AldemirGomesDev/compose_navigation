@@ -11,6 +11,7 @@ object Versions {
     val junit = "4.13.2"
     val junitExt = "1.1.5"
     val expresso = "3.5.1"
+    val composeBom = "2022.10.00"
 
     val compileSdk = 33
     val minSdk = 24

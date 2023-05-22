@@ -2,9 +2,13 @@ object Dependencies {
     val coreKtx by lazy { "androidx.core:core-ktx:${Versions.coreKtx}" }
     val lifecycleKtx by lazy { "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleKtx}" }
     val ActivityCompose by lazy { "androidx.activity:activity-compose:${Versions.compose}" }
-    val composeUi by lazy { "androidx.compose.ui:ui:${Versions.compose}" }
-    val composeUiToolingPreview by lazy { "androidx.compose.ui:ui-tooling-preview:${Versions.compose}" }
-    val material3 by lazy { "androidx.compose.material3:material3:${Versions.material3}" }
+
+    val composeBom by lazy { "androidx.compose:compose-bom:${Versions.composeBom}" }
+    val composeUi by lazy { "androidx.compose.ui:ui" }
+    val composeGraphics by lazy { "androidx.compose.ui:ui-graphics" }
+    val composeUiToolingPreview by lazy { "androidx.compose.ui:ui-tooling-preview" }
+    val material3 by lazy { "androidx.compose.material3:material3" }
+
     val navigationCompose by lazy { "androidx.navigation:navigation-compose:${Versions.navigationCompose}" }
     val navigationAnimation by lazy { "com.google.accompanist:accompanist-navigation-animation:${Versions.navigationAnimation}" }
     val gson by lazy { "com.google.code.gson:gson:${Versions.gson}" }
@@ -15,7 +19,8 @@ object Dependencies {
     val junit by lazy { "junit:junit:${Versions.junit}" }
     val junitExt by lazy { "androidx.test.ext:junit:${Versions.junitExt}" }
     val expresso by lazy { "androidx.test.espresso:espresso-core:${Versions.expresso}" }
-    val junitCompose by lazy { "androidx.compose.ui:ui-test-junit4:${Versions.compose}" }
-    val composeUiTooling by lazy { "androidx.compose.ui:ui-tooling:${Versions.compose}" }
-    val composeTestManifest by lazy { "androidx.compose.ui:ui-test-manifest:${Versions.compose}" }
+
+    val junitCompose by lazy { "androidx.compose.ui:ui-test-junit4" }
+    val composeUiTooling by lazy { "androidx.compose.ui:ui-tooling" }
+    val composeTestManifest by lazy { "androidx.compose.ui:ui-test-manifest" }
 }
