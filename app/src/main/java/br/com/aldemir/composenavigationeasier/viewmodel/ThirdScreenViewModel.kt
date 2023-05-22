@@ -1,8 +1,9 @@
 package br.com.aldemir.composenavigationeasier.viewmodel
 
 import androidx.lifecycle.ViewModel
-import br.com.aldemir.composenavigationeasier.NavigationActions
-import br.com.aldemir.composenavigationeasier.Navigator
+import br.com.aldemir.composenavigationeasier.navigation.NavigationActions
+import br.com.aldemir.composenavigationeasier.navigation.NavigationDestinations
+import br.com.aldemir.composenavigationeasier.navigation.Navigator
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -11,7 +12,11 @@ class ThirdScreenViewModel @Inject constructor(
     private val navigator: Navigator
 ) : ViewModel() {
 
-    fun navigateExample() {
-        navigator.navigate(NavigationActions.FirstScreen.firstScreenToSecondScreen())
+    fun navigateToBack() {
+        navigator.navigate(
+            NavigationActions.NavigateToBack.navigateToBack(
+                NavigationDestinations.secondScreen
+            )
+        )
     }
 }

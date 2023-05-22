@@ -1,6 +1,5 @@
-package br.com.aldemir.composenavigationeasier
+package br.com.aldemir.composenavigationeasier.navigation
 
-import android.util.Log
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -20,7 +19,6 @@ class ComposeCustomNavigator @Inject constructor() : Navigator {
     override val navActions = _navActions.asStateFlow()
 
     override fun navigate(navAction: NavigationAction?) {
-        Log.w("TAG_navigator", "navigate: $navAction")
         _navActions.update { navAction }
     }
 }

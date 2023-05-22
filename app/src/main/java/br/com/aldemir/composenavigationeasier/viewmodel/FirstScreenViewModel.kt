@@ -1,8 +1,8 @@
 package br.com.aldemir.composenavigationeasier.viewmodel
 
 import androidx.lifecycle.ViewModel
-import br.com.aldemir.composenavigationeasier.NavigationActions
-import br.com.aldemir.composenavigationeasier.Navigator
+import br.com.aldemir.composenavigationeasier.navigation.NavigationActions
+import br.com.aldemir.composenavigationeasier.navigation.Navigator
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
